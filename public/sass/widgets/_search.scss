@@ -1,0 +1,51 @@
+.search-container {
+	margin-right: 15px;
+	margin-top: 55px;
+
+	.search-input {
+		width: 250px;
+		margin-left: 150px;
+	}
+
+	.btn {
+		margin-top: -9px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+.global-search-pl .search-input{
+	width: 300px;
+}
+
+.search-result-list {
+	margin-top: 20px;
+	min-height: 300px;
+}
+
+.search-paging {
+	margin-bottom: 20px;
+}
+
+
+.search-box {
+	position: relative;
+
+	input {
+		padding-right: 22px;
+	}
+
+	.btn {
+		margin-right: -5px;
+		width: 27px;
+		height: 27px;
+	}
+
+	.icon-remove {
+		position: absolute;
+		cursor: pointer;
+		top: 7px;
+		right: 5px;
+		z-index: 1000;
+	}
+}

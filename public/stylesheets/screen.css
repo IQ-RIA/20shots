@@ -1,0 +1,957 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p194@studshara/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../sass/core/_core.scss */
+* {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 600;
+}
+
+/* line 11, ../sass/core/_core.scss */
+.brand {
+  font-size: 22px;
+}
+
+/* line 14, ../sass/core/_core.scss */
+.hidden {
+  display: none;
+}
+
+/* line 16, ../sass/core/_core.scss */
+.center {
+  text-align: center;
+}
+
+/* line 18, ../sass/core/_core.scss */
+.no-round {
+  border-radius: 0px !important;
+}
+
+/* line 20, ../sass/core/_core.scss */
+.clear-fix {
+  clear: both;
+}
+
+/* line 22, ../sass/core/_core.scss */
+.column {
+  float: left;
+}
+
+/* line 26, ../sass/core/_core.scss */
+a {
+  cursor: pointer;
+}
+
+/* line 32, ../sass/core/_core.scss */
+.btn,
+a,
+input,
+.navbar .brand {
+  font-weight: 600;
+}
+
+/* line 35, ../sass/core/_core.scss */
+.page-container {
+  width: 755px;
+  float: left;
+}
+
+/* line 39, ../sass/core/_core.scss */
+.table {
+  background: white;
+}
+
+/* line 43, ../sass/core/_core.scss */
+h1 {
+  font-weight: 600;
+  font-size: 32px;
+  color: #555555;
+  text-shadow: 0px 0px 0px white;
+  margin-bottom: 25px;
+  line-height: 32px;
+}
+
+/* line 52, ../sass/core/_core.scss */
+.text {
+  color: #555555;
+  font-size: 14px;
+  text-shadow: 0px 0px 0px white;
+  font-weight: 600;
+}
+
+/* line 60, ../sass/core/_core.scss */
+center {
+  color: #555555;
+  font-weight: 600;
+}
+
+/* line 65, ../sass/core/_core.scss */
+.social-container {
+  float: right;
+  padding-top: 0px;
+}
+/* line 69, ../sass/core/_core.scss */
+.social-container .social {
+  background: white url(/public/images/social.png) repeat-x;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  text-align: center;
+  color: #07357D;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 84, ../sass/core/_core.scss */
+.social-container .social:hover {
+  background: #fff;
+}
+
+/* line 90, ../sass/core/_core.scss */
+div.notice {
+  margin-top: -25px;
+  visibility: hidden;
+  height: 40px;
+  text-align: center;
+}
+/* line 96, ../sass/core/_core.scss */
+div.notice .notice {
+  background-size: 30px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  background: url(/public/images/notice-icon.png) no-repeat;
+}
+
+/* line 105, ../sass/core/_core.scss */
+.list {
+  background: white;
+}
+
+/* line 108, ../sass/core/_core.scss */
+.left {
+  float: left;
+}
+
+/* line 111, ../sass/core/_core.scss */
+.right {
+  float: right;
+}
+
+/* line 114, ../sass/core/_core.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 117, ../sass/core/_core.scss */
+a {
+  font-size: 14px;
+}
+
+/* line 121, ../sass/core/_core.scss */
+.search-input {
+  height: 28px !important;
+}
+
+/* line 125, ../sass/core/_core.scss */
+.help-block {
+  font-size: 12px;
+}
+
+/* line 129, ../sass/core/_core.scss */
+.control-label {
+  text-align: left;
+}
+
+/* line 133, ../sass/core/_core.scss */
+.stretched {
+  padding: 4px 20px;
+}
+
+/* line 137, ../sass/core/_core.scss */
+.help-block {
+  clear: both;
+}
+
+/* line 141, ../sass/core/_core.scss */
+.link {
+  color: #08C !important;
+}
+
+/* line 145, ../sass/core/_core.scss */
+tr {
+  cursor: pointer;
+}
+
+/* line 150, ../sass/core/_core.scss */
+tr:hover td {
+  background: #EDEDED !important;
+}
+
+/* line 155, ../sass/core/_core.scss */
+.centered {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+}
+
+/* line 162, ../sass/core/_core.scss */
+.help-block {
+  line-height: 14px;
+}
+
+/* line 166, ../sass/core/_core.scss */
+.relative {
+  position: relative;
+}
+
+/* line 170, ../sass/core/_core.scss */
+.hidden {
+  display: none;
+}
+
+/* line 172, ../sass/core/_core.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 176, ../sass/core/_core.scss */
+.btn-file {
+  position: relative;
+}
+
+/* line 5, ../sass/widgets/_header.scss */
+.navbar-inner div.logout {
+  float: right;
+  font-size: 14px;
+  margin-top: 12px;
+}
+/* line 10, ../sass/widgets/_header.scss */
+.navbar-inner div.logout a {
+  color: #999;
+}
+/* line 13, ../sass/widgets/_header.scss */
+.navbar-inner div.logout a:hover {
+  color: #333;
+}
+/* line 19, ../sass/widgets/_header.scss */
+.navbar-inner .navbar-search {
+  margin-left: 80px;
+}
+
+/* line 24, ../sass/widgets/_header.scss */
+.brand {
+  background: url("/public/images/logo_5.png");
+  background-repeat: no-repeat;
+  background-position: 7px 1px;
+  background-size: 66%;
+  width: 160px;
+  height: 20px;
+}
+
+/* line 5, ../sass/widgets/_layout.scss */
+body.login-layout {
+  background: #778899;
+}
+/* line 9, ../sass/widgets/_layout.scss */
+body.default-layout {
+  background: #fafafa;
+}
+
+/* line 14, ../sass/widgets/_layout.scss */
+.language-bar {
+  float: right;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+/* line 20, ../sass/widgets/_layout.scss */
+span {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* line 26, ../sass/widgets/_layout.scss */
+.social-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* line 33, ../sass/widgets/_layout.scss */
+.content {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+/* line 38, ../sass/widgets/_layout.scss */
+.content .page {
+  float: left;
+  width: 775px;
+}
+
+/* line 45, ../sass/widgets/_layout.scss */
+.page .main-container {
+  min-height: 400px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 52, ../sass/widgets/_layout.scss */
+.page-container .alert-box {
+  top: 0px;
+  height: auto;
+}
+
+/* line 58, ../sass/widgets/_layout.scss */
+body {
+  padding-top: 40px;
+}
+
+/* line 62, ../sass/widgets/_layout.scss */
+.inner-container {
+  padding-top: 25px;
+}
+
+/* line 66, ../sass/widgets/_layout.scss */
+.copyright {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* line 74, ../sass/widgets/_layout.scss */
+.login-layout .copyright {
+  margin-top: 15px;
+  color: white;
+}
+
+/* line 81, ../sass/widgets/_layout.scss */
+.default-layout .copyright {
+  margin-top: 30px;
+  color: #222;
+}
+
+/* line 9, ../sass/widgets/_menu.scss */
+.menu {
+  float: left;
+  width: 185px;
+}
+/* line 14, ../sass/widgets/_menu.scss */
+.menu li {
+  padding-left: 15px;
+  height: 32px;
+  vertical-align: middle;
+}
+/* line 20, ../sass/widgets/_menu.scss */
+.menu li span {
+  color: #557;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* line 2, ../sass/widgets/_menu.scss */
+.menu li:hover a {
+  color: #555555;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+/* line 2, ../sass/widgets/_menu.scss */
+.menu .active a {
+  color: #555555;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+
+/* line 2, ../sass/widgets/_profile.scss */
+.profile .btn {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+/* line 6, ../sass/widgets/_profile.scss */
+.profile .btn.btn-info {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+/* line 12, ../sass/widgets/_profile.scss */
+.profile .uneditable-input {
+  width: 270px;
+}
+/* line 17, ../sass/widgets/_profile.scss */
+.profile #universityTitle {
+  white-space: normal;
+  height: 40px;
+  font-size: 14px;
+}
+
+/* line 1, ../sass/widgets/_form.scss */
+fieldset {
+  padding: 10px;
+  margin-top: 10px;
+}
+/* line 5, ../sass/widgets/_form.scss */
+fieldset legend {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #777;
+  width: 100%;
+}
+
+/* line 12, ../sass/widgets/_form.scss */
+.file-field {
+  margin-bottom: 10px;
+  width: 296px;
+}
+
+/* line 18, ../sass/widgets/_form.scss */
+.form-field {
+  font-weight: 600;
+  color: #555;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 24, ../sass/widgets/_form.scss */
+.form-field.button {
+  padding: 3px 25px;
+  cursor: pointer;
+}
+/* line 29, ../sass/widgets/_form.scss */
+.form-field.textfield {
+  font-family: "Open sans";
+  font-size: 14px;
+  width: 220px;
+  padding: 2px 2px;
+  border: 1px solid #bbb;
+}
+/* line 37, ../sass/widgets/_form.scss */
+.form-field.select {
+  cursor: pointer;
+}
+
+/* line 42, ../sass/widgets/_form.scss */
+select {
+  width: 220px;
+}
+/* line 45, ../sass/widgets/_form.scss */
+select option {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 50, ../sass/widgets/_form.scss */
+.buttons {
+  padding-top: 15px;
+}
+
+/* line 54, ../sass/widgets/_form.scss */
+form li {
+  height: 43px;
+}
+
+/* line 1, ../sass/widgets/_work.scss */
+.work-list-item {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #777;
+}
+/* line 7, ../sass/widgets/_work.scss */
+.work-list-item .description {
+  line-height: 23px;
+}
+/* line 9, ../sass/widgets/_work.scss */
+.work-list-item .description a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* line 15, ../sass/widgets/_work.scss */
+.work-list-item .bottom-bar {
+  margin: 10px 0px;
+}
+
+/* line 1, ../sass/widgets/_search.scss */
+.search-container {
+  margin-right: 15px;
+  margin-top: 55px;
+}
+/* line 5, ../sass/widgets/_search.scss */
+.search-container .search-input {
+  width: 250px;
+  margin-left: 150px;
+}
+/* line 10, ../sass/widgets/_search.scss */
+.search-container .btn {
+  margin-top: -9px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* line 17, ../sass/widgets/_search.scss */
+.global-search-pl .search-input {
+  width: 300px;
+}
+
+/* line 21, ../sass/widgets/_search.scss */
+.search-result-list {
+  margin-top: 20px;
+  min-height: 300px;
+}
+
+/* line 26, ../sass/widgets/_search.scss */
+.search-paging {
+  margin-bottom: 20px;
+}
+
+/* line 31, ../sass/widgets/_search.scss */
+.search-box {
+  position: relative;
+}
+/* line 34, ../sass/widgets/_search.scss */
+.search-box input {
+  padding-right: 22px;
+}
+/* line 38, ../sass/widgets/_search.scss */
+.search-box .btn {
+  margin-right: -5px;
+  width: 27px;
+  height: 27px;
+}
+/* line 44, ../sass/widgets/_search.scss */
+.search-box .icon-remove {
+  position: absolute;
+  cursor: pointer;
+  top: 7px;
+  right: 5px;
+  z-index: 1000;
+}
+
+/* line 1, ../sass/widgets/_shara.scss */
+#dropbox {
+  height: 500px;
+  width: 700px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 10, ../sass/widgets/_shara.scss */
+.page.shara .inner-content {
+  min-height: 120px;
+}
+/* line 14, ../sass/widgets/_shara.scss */
+.page.shara .top-toolbar {
+  height: 50px;
+  clear: both;
+}
+/* line 18, ../sass/widgets/_shara.scss */
+.page.shara .top-toolbar .add-btn {
+  padding: 4px 15px 4px 30px;
+}
+
+/* line 24, ../sass/widgets/_shara.scss */
+.list {
+  min-height: 150px;
+}
+/* line 26, ../sass/widgets/_shara.scss */
+.list div.desc {
+  width: 490px;
+}
+/* line 29, ../sass/widgets/_shara.scss */
+.list div.desc p {
+  margin-top: 5px;
+  font-size: 13px;
+}
+/* line 35, ../sass/widgets/_shara.scss */
+.list .lm-placeholder {
+  margin-top: 10px;
+  min-height: 20px;
+}
+/* line 40, ../sass/widgets/_shara.scss */
+.list h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+/* line 45, ../sass/widgets/_shara.scss */
+.list div.comments {
+  margin-top: 10px;
+  float: right;
+}
+/* line 49, ../sass/widgets/_shara.scss */
+.list div.comments a {
+  font-size: 13px;
+}
+/* line 54, ../sass/widgets/_shara.scss */
+.list .text-content {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/* line 60, ../sass/widgets/_shara.scss */
+.upload-file-preview {
+  height: 150px;
+  margin: 10px;
+  float: left;
+  display: inline;
+  width: 100px;
+}
+/* line 67, ../sass/widgets/_shara.scss */
+.upload-file-preview .preview-img {
+  background: url("/public/images/document.png") no-repeat;
+  background-size: 90px 100px;
+  height: 100px;
+}
+/* line 73, ../sass/widgets/_shara.scss */
+.upload-file-preview .title {
+  word-break: break-word;
+  margin-bottom: 20px;
+  max-height: 100px;
+}
+
+/* line 2, ../sass/widgets/_alert.scss */
+.alert-box {
+  margin: 0 auto;
+  position: relative;
+  height: 100px;
+}
+/* line 7, ../sass/widgets/_alert.scss */
+.alert-box .alert-block {
+  border: none;
+}
+/* line 9, ../sass/widgets/_alert.scss */
+.alert-box .alert-block p {
+  line-height: 21px;
+  font-size: 13px;
+}
+/* line 14, ../sass/widgets/_alert.scss */
+.alert-box .alert-block h4 {
+  font-size: 14px;
+}
+/* line 19, ../sass/widgets/_alert.scss */
+.alert-box.alert-success {
+  background: lavender;
+}
+
+/* line 25, ../sass/widgets/_alert.scss */
+.login-layout .alert-box {
+  width: 940px;
+}
+/* line 30, ../sass/widgets/_alert.scss */
+.login-layout #inner-container .alert-box {
+  top: -40px;
+}
+
+/* line 37, ../sass/widgets/_alert.scss */
+.default-layout .alert-box {
+  width: 755px;
+}
+
+/* line 1, ../sass/widgets/_toolbar.scss */
+.toolbar {
+  text-align: right;
+}
+
+/* line 3, ../sass/widgets/_document.scss */
+.document-upload {
+  padding: 0px;
+}
+/* line 6, ../sass/widgets/_document.scss */
+.document-upload .inner {
+  padding: 10px;
+  position: relative;
+  background: white;
+  min-height: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px dashed #ccc;
+}
+/* line 15, ../sass/widgets/_document.scss */
+.document-upload .inner h3 {
+  top: 50%;
+  font-size: 22px;
+  position: absolute;
+  margin: 0 auto;
+  margin-top: -10px;
+  width: 100%;
+}
+/* line 24, ../sass/widgets/_document.scss */
+.document-upload .inner.highlighted {
+  background: #efefef;
+}
+/* line 28, ../sass/widgets/_document.scss */
+.document-upload .inner .overlay {
+  padding: 0px 45px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+/* line 43, ../sass/widgets/_document.scss */
+.documents-title {
+  font-size: 20px;
+  margin: 15px 0px;
+}
+
+/* line 48, ../sass/widgets/_document.scss */
+.document-item {
+  cursor: pointer;
+  float: left;
+  width: 310px;
+  border: 1px solid #EEE;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 18px 22px 28px 28px;
+}
+/* line 57, ../sass/widgets/_document.scss */
+.document-item .preview {
+  height: 95px;
+  width: 99px;
+  float: left;
+  background: url("/public/images/document_folder.png") no-repeat top center;
+}
+/* line 64, ../sass/widgets/_document.scss */
+.document-item .text {
+  width: 210px;
+  float: left;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+}
+/* line 71, ../sass/widgets/_document.scss */
+.document-item .text p {
+  margin-top: 20px;
+  text-align: left;
+}
+/* line 77, ../sass/widgets/_document.scss */
+.document-item:hover {
+  background: #efefef;
+}
+
+/* line 82, ../sass/widgets/_document.scss */
+#uploadDocumentDialog {
+  width: 420px;
+}
+/* line 85, ../sass/widgets/_document.scss */
+#uploadDocumentDialog input[type=text] {
+  width: 250px;
+}
+/* line 89, ../sass/widgets/_document.scss */
+#uploadDocumentDialog select {
+  width: 259px;
+}
+/* line 93, ../sass/widgets/_document.scss */
+#uploadDocumentDialog textarea {
+  height: 100px;
+  width: 248px;
+}
+/* line 98, ../sass/widgets/_document.scss */
+#uploadDocumentDialog form {
+  padding: 5px 10px 10px 10px;
+}
+
+/* line 1, ../sass/widgets/_breadcrumbs.scss */
+.breadcrumbs {
+  height: 41px;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(/public/fonts/k3k702ZOKiLJc3WVjuplzJ1r3JsPcQLi8jytr04NNhU.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(/public/fonts/MTP_ySUJH_bn48VBG8sNSp1r3JsPcQLi8jytr04NNhU.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(/public/fonts/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+/* line 1, ../sass/widgets/_login.scss */
+.root {
+  padding: 20px 0px 80px 0px;
+}
+/* line 11, ../sass/widgets/_login.scss */
+.root span,
+.root h1,
+.root h2,
+.root h3,
+.root h4,
+.root h5,
+.root center,
+.root p {
+  color: #555555;
+}
+
+/* line 17, ../sass/widgets/_login.scss */
+.default-layout .root {
+  padding-top: 45px;
+  background: #fafafa;
+}
+
+/* line 24, ../sass/widgets/_login.scss */
+.login-layout .root {
+  background: white;
+  padding-bottom: 20px;
+}
+
+/* line 31, ../sass/widgets/_login.scss */
+#login-form {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid white;
+}
+
+/* line 37, ../sass/widgets/_login.scss */
+.app-description {
+  font-weight: 600;
+  font-size: 32px;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+  line-height: 18px;
+  width: 650px;
+  float: left;
+}
+
+/* line 47, ../sass/widgets/_login.scss */
+.auth-container {
+  float: right;
+  width: 220px;
+}
+/* line 51, ../sass/widgets/_login.scss */
+.auth-container .email {
+  background: white url(/public/images/email.png) no-repeat 95% 50%;
+}
+/* line 55, ../sass/widgets/_login.scss */
+.auth-container .tab {
+  min-height: 180px;
+}
+/* line 59, ../sass/widgets/_login.scss */
+.auth-container form {
+  height: 115px;
+}
+/* line 63, ../sass/widgets/_login.scss */
+.auth-container .btn {
+  border-radius: 0px;
+}
+/* line 67, ../sass/widgets/_login.scss */
+.auth-container center {
+  line-height: 20px;
+}
+
+/* line 72, ../sass/widgets/_login.scss */
+.app-desc {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+/* line 76, ../sass/widgets/_login.scss */
+.app-desc li {
+  margin-left: 20px;
+}
+
+/* line 1, ../sass/widgets/_loadmask.scss */
+.loadmask {
+  background: url("/public/images/loader.gif") center center no-repeat;
+}
+
+/* line 6, ../sass/widgets/_loadmask.scss */
+.shara .loadmask {
+  min-height: 100px;
+}
+
+/* line 3, ../sass/widgets/_lm.scss */
+.lm-placeholder .less,
+.lm-placeholder .more {
+  margin-left: 15px;
+  font-size: 13px;
+  text-decoration: underline;
+  color: #333;
+  margin-top: 15px;
+  float: right;
+}

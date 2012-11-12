@@ -1,0 +1,40 @@
+
+.alert-box {
+	margin: 0 auto;
+	position:relative;
+	height:100px;
+
+	.alert-block  {
+		border: none;
+		p {
+			line-height: 21px;
+			font-size: 13px;
+		}
+
+		h4 {
+			font-size: 14px;
+		}
+	}
+
+	&.alert-success {
+		background: lavender;
+	}
+}
+
+.login-layout {
+	.alert-box {
+		width: 940px;
+	}
+
+	#inner-container {
+		.alert-box {
+			top: -40px;
+		}
+	}
+}
+
+.default-layout {
+	.alert-box {
+		width: 755px;
+	}
+}

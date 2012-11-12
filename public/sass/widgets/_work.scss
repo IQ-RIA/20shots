@@ -1,0 +1,18 @@
+.work-list-item {
+	//height: 70px;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #777;
+
+	.description {
+		line-height: 23px;
+		a {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+
+	.bottom-bar {
+		margin: 10px 0px;
+	}
+}

@@ -1,0 +1,178 @@
+@import "compass/css3";
+
+* {
+	font: {
+		family: 'Open Sans', sans-serif !important;
+		weight: $font-weight;
+	}
+}
+
+
+.brand {
+	font-size: 22px; }
+// base css-styles
+.hidden { 
+	display: none; }
+.center { 
+	text-align: center; }
+.no-round { 
+	border-radius: 0px !important; }
+.clear-fix { 
+	clear: both; }
+.column { 
+	float: left; }
+
+// base tag-styles
+a { 
+	cursor: pointer; }
+
+.btn,
+a,
+input,
+.navbar .brand {
+	font-weight: $font-weight;}
+
+.page-container {
+	width: 755px;
+	float: left; }
+
+.table {
+	background: white;
+}
+
+h1 {
+	font-weight: $font-weight;
+	font-size: $h1-font-size;
+	color: $h-color;
+	text-shadow: 0px 0px 0px rgba(255, 255, 255, 1);
+	margin-bottom: 25px;
+	line-height: 32px; }
+
+
+.text {
+	color: $h-color;
+	font-size: 14px;
+	//text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+	text-shadow: 0px 0px 0px rgba(255, 255, 255, 1);
+	font-weight: $font-weight;
+}
+
+center {
+	color: $h-color;
+	font-weight: $font-weight;
+}
+
+.social-container {
+	float: right;
+	padding-top: 0px;
+
+	.social {
+		background: white url(/public/images/social.png) repeat-x;
+		display: inline-block;
+		height: 25px;
+		line-height: 25px;
+		padding: 0 10px;
+		text-align: center;
+		color: #07357D;
+		font-weight: 700;
+		font-size: 14px;
+		text-decoration: none;
+		box-shadow: 0 0 0px 5px rgba(0,0,0,0.10);
+		margin-right: 0px;
+		@include border-radius(10px);
+
+		&:hover {
+			background: #fff;
+		}
+	}
+}
+
+div.notice {
+	margin-top: -25px;
+	visibility: hidden;
+	height:40px;
+	text-align: center;
+
+	.notice {
+		background-size: 30px;
+		padding-left: 40px;
+		padding-bottom: 10px;
+		padding-top: 5px;
+		background: url(/public/images/notice-icon.png) no-repeat;
+	}
+}
+
+.list {
+	background: white;}
+
+.left {
+	float: left;}
+
+.right {
+	float: right;}
+
+.text-right {
+	text-align: right;}
+
+a {
+	font-size: 14px;
+}
+
+.search-input {
+	height: 28px !important;
+}
+
+.help-block {
+	font-size: 12px;
+}
+
+.control-label {
+	text-align: left;
+}
+
+.stretched {
+	padding: 4px 20px;
+}
+
+.help-block {
+	clear: both;
+}
+
+.link {
+	color: #08C !important;
+}
+
+tr {
+	cursor: pointer;
+}
+
+tr:hover {
+	td {
+		background: #EDEDED !important;
+	}
+}
+
+.centered {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 150px;
+}
+
+
+.help-block {
+	line-height: 14px;
+}
+
+.relative {
+	position: relative;
+}
+
+.hidden {display:none;}
+
+html, body {
+	height: 100%;
+}
+
+.btn-file {
+	position: relative;
+}

@@ -1,0 +1,42 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$base-color: #555;
+$h-color: $base-color;
+
+
+$default-root-background: #FAFAFA;
+$body-default-background: #FAFAFA;
+
+//$login-root-background: #FAFAFA;
+//$body-login-background: #3E5C93;
+$login-root-background: white;
+$body-login-background: #333;
+
+$h1-font-size: 32px;
+
+$font-weight: 600;
+
+@import "compass/reset";
+
+@import "compass/css3";
+@import "core/core";
+
+@import "widgets/layout";
+@import "widgets/dashboard";
+@import "widgets/menu";
+@import "widgets/profile";
+@import "widgets/form";
+@import "widgets/work";
+@import "widgets/search";
+@import "widgets/shara";
+@import "widgets/alert";
+@import "widgets/toolbar";
+@import "widgets/document";
+@import "widgets/breadcrumbs";
+@import "widgets/google";
+@import "widgets/login";
+@import "widgets/loadmask";
+@import "widgets/lm";

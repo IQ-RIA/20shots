@@ -1,0 +1,31 @@
+@import "compass/css3";
+
+.navbar-inner {
+	//background: #333 !important;
+	div.logout {
+		float: right;
+		font-size: 14px;
+		margin-top: 12px; 
+
+		a {
+			color: #999;
+
+			&:hover {
+				color: #333;
+			}
+		}
+	}
+
+	.navbar-search {
+		margin-left: 80px
+	}
+}
+
+.brand {
+	background: url("/public/images/logo_5.png");
+	background-repeat: no-repeat;
+	background-position: 7px 1px;
+	background-size: 66%;
+	width: 160px;
+	height: 20px;
+}

@@ -1,0 +1,22 @@
+.profile {
+    .btn {
+        padding-right: 20px;
+        padding-left: 20px;
+        
+        &.btn-info {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+
+    .uneditable-input {
+    	width: 270px;
+    	
+    }
+
+    #universityTitle {
+    	white-space: normal;
+    	height: 40px;
+    	font-size: 14px;
+    }
+}

@@ -1,0 +1,85 @@
+@import "compass/css3/border-radius";
+@import "./header";
+
+body {
+	&.login-layout {
+		background: #778899;//$body-login-background;
+	}
+
+	&.default-layout {
+		background: $body-default-background;
+	}
+}
+
+.language-bar {
+	float:right;
+	margin-top: 2px;
+	margin-right: 10px;
+}
+
+span {
+	color: #333;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.social-link {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+// CONTAINER
+.content {
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 100px;
+
+	.page {
+		float: left;
+		width: 775px;
+	}
+}
+
+.page {
+	.main-container {
+		min-height: 400px;
+		@include border-radius(5px);
+	}
+}
+
+.page-container {
+	.alert-box {
+		top: 0px;
+		height: auto;
+	}	
+}
+
+body {
+	padding-top: 40px;
+}
+
+.inner-container {
+	padding-top: 25px;
+}
+
+.copyright {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.login-layout {
+	.copyright {
+		margin-top: 15px;
+		color: white;
+	}
+}
+
+.default-layout {
+	.copyright {
+		margin-top: 30px;
+		color: #222;
+	}
+}

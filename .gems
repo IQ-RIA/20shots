@@ -1,0 +1,27 @@
+# .gems generated gem export file. Note that any env variable settings will be missing. Append these after using a ';' field separator
+addressable -v2.2.8
+capistrano -v2.9.0
+chunky_png -v1.2.5
+commonwatir -v3.0.0
+compass -v0.11.5
+em-dir-watcher -v0.9.4
+em-websocket -v0.3.6
+eventmachine -v0.12.10
+ffi -v1.0.11
+firewatir -v1.9.4
+fssm -v0.2.8.1
+highline -v1.6.9
+json -v1.7.3
+livereload -v1.6.1
+multi_json -v1.3.4
+net-scp -v1.0.4
+net-sftp -v2.0.5
+net-ssh -v2.3.0
+net-ssh-gateway -v1.1.0
+rake -v0.9.2.2
+rb-inotify -v0.8.8
+rubygems-update -v1.8.24
+rubyzip -v0.9.8
+sass -v3.1.1
+stackdeck -v0.2.0
+watir -v3.0.0
