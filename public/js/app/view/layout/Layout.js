@@ -6,9 +6,7 @@ define(['j/core/base/View', 'text!j/view/layout/LoginLayout.tpl', 'text!j/view/l
     tpl: LoginLayout,
     renderParams: {},
     events: {
-      "click #vk-login-btn": "onVkLoginButtonClick",
-      "click #play-btn": "onPlayButtonClick",
-      "keypress #search-val": "onSongSearchChanged"
+      "click #fb-login-btn": "onFbLoginButtonClick"
     },
     addPage: function(page) {
       if (this.currentPage) {
@@ -48,77 +46,39 @@ define(['j/core/base/View', 'text!j/view/layout/LoginLayout.tpl', 'text!j/view/l
       };
       return this;
     },
-    onVkLoginButtonClick: function(e) {
-      e.preventDefault();
-      return VK.Auth.login(this.onVkLogin, 8);
-    },
-    onVkLogin: function(response) {
-      var user;
-      if (response.status !== "connected") {
-        return;
-      }
-      user = response.session.user;
-      return VK.api("isAppUser", {
-        uid: user.id
-      }, function(response) {
-        if (response.response - 0 !== 1) {
-          return;
+    onFbLoginButtonClick: function() {
+      var _this = this;
+      return FB.getLoginStatus(function(response) {
+        if (response.status === "connected") {
+          return _this.onFacebookLogin(response);
+        } else if (response.status === "not_authorized") {
+          return _this.loginViaFacebook();
+        } else {
+          return _this.loginViaFacebook();
         }
-        user.first_name = user.first_name;
-        user.last_name = user.last_name;
-        user.vk_id = user.id;
-        return $.ajax({
-          type: "POST",
-          data: user,
-          url: J.links.user,
-          dataType: "json",
-          success: function(response) {
-            window.user = response.user;
-            window.online = response.online;
-            return J.app.renderDefaultLayout();
-          }
-        });
-      }, "json");
+      });
     },
-    onPlayButtonClick: function(e) {
-      var target;
-      target = $(e.target);
-      if (target.hasClass("isActive")) {
-        target.val("Play");
-        return target.removeClass("isActive");
-      } else {
-        target.val("Stop Playing");
-        target.addClass("isActive");
-        return this.playSong();
-      }
+    loginViaFacebook: function() {
+      var _this = this;
+      return FB.login(function(response) {
+        if (response.authResponse) {
+          return _this.onFacebookLogin(response);
+        }
+      }, {
+        scope: "email, user_photos"
+      });
     },
-    playSong: function() {
-      var el;
-      el = $("#player").get(0);
-      el.src = "http://" + window.location.hostname + "/music/" + J.currentDj + ".mp3";
-      return el.play();
-    },
-    onSongSearchChanged: function(e) {
-      var field,
+    onFacebookLogin: function(response) {
+      var accessToken,
         _this = this;
-      field = $(e.target);
-      if (this.searchTimeout) {
-        clearTimeout(this.searchTimeout);
-      }
-      return this.searchTimeout = setTimeout(function() {
-        return _this.loadSongs(field.val());
-      }, 350);
-    },
-    loadSongs: function(name) {
-      return VK.api("audio.search", {
-        q: name,
-        auto_complete: true,
-        sort: 2,
-        count: 200
-      }, _.bind(this.renderSongList, this));
-    },
-    renderSongList: function(config) {
-      return this.getSongList().updateWith(config.response);
+      accessToken = response.authResponse.accessToken;
+      return $.post("/user/fbLogin", {
+        accessToken: accessToken
+      }, function(response) {
+        if (response.success) {
+          return _this.toDefault().render();
+        }
+      }, "json");
     }
   });
 });

@@ -1,6 +1,11 @@
 <?php
 
 class UserController extends Controller {
+
+	public function actionFbLogin() {
+		echo json_encode(array('success' => true));
+	}
+
 	public function actionLogin() {
 		$response = array( 'success' => true );
 		$request = Yii::app()->request;

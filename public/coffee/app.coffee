@@ -12,7 +12,6 @@ define [
                 @renderLoginLayout()
 
         renderDefaultLayout: ->
-            @socket = io.connect "http://#{window.location.host}:4000"
             @layout.toDefault().render()
 
         renderLoginLayout: ->

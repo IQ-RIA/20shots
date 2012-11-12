@@ -17,39 +17,41 @@ html, body {
   font-family: 'Open Sans', sans-serif !important;
 }
 
-/* line 20, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 .login-layout {
   background-color: #AC0;
   background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.3, rgba(255, 255, 255, 0.2)), color-stop(0.3, transparent), to(transparent));
 }
-/* line 26, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 .login-layout .root {
   margin: 0 auto;
   width: 1080px;
   padding-top: 200px;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 .default-layout .brand {
   float: none;
   text-align: center;
 }
-/* line 41, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .default-layout .left-col,
 .default-layout .right-col,
 .default-layout .middle-col {
   height: 100%;
 }
-/* line 45, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .default-layout .root {
   position: absolute;
-  top: 60px;
+  top: 0px;
   left: 0px;
   right: 0px;
-  bottom: 10px;
+  bottom: 0px;
+  background-color: #AC0;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.3, rgba(255, 255, 255, 0.2)), color-stop(0.3, transparent), to(transparent));
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .btn {
   padding: 8px 20px;
   background: #4479BA;
@@ -66,14 +68,14 @@ html, body {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 71, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .btn:hover {
   background: #356094;
   color: #FFF;
   border: solid 1px #2A4E77;
   text-decoration: none;
 }
-/* line 78, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .btn:active {
   color: #FFF;
   background: -webkit-linear-gradient(bottom, #465a8d, #4b64a5);
@@ -84,7 +86,7 @@ html, body {
   border: solid 1px #203E5F;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .left-col {
   float: left;
   width: 250px;
@@ -92,30 +94,30 @@ html, body {
   border-right: 1px solid #999;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 .right-col {
   float: right;
   width: 250px;
   border-left: 1px solid #999;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .middle-col {
   margin: 0 250px;
   position: relative;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .no-scroll {
   overflow: hidden;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .scrollable {
   overflow: auto;
   position: absolute;
@@ -125,20 +127,20 @@ html, body {
   right: 5px;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 a {
   color: #4479BA;
   cursor: pointer;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .navbar-inner .logout {
   position: absolute;
   top: 10px;
   right: 15px;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 #play-btn {
   margin-top: -55px;
 }

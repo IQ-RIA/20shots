@@ -15,7 +15,6 @@ html, body {
 	font-family: 'Open Sans', sans-serif !important;
 }
 
-
 // layouts
 .login-layout {
 	//background: lavender;
@@ -44,10 +43,12 @@ html, body {
 
 	.root {
 		position: absolute;
-		top: 60px;
+		top: 0px;
 		left: 0px;
 		right: 0px;
-		bottom: 10px;
+		bottom: 0px;
+		background-color: #AC0;
+		background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.3, rgba(255, 255, 255, .2)), color-stop(.3, transparent), to(transparent));
 	}
 }
 
