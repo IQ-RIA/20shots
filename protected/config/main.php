@@ -39,12 +39,6 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
-				array('user/update', 'pattern'=>'user', 'verb'=>'PUT'),
-				array('user/verify', 'pattern'=> 'login/verify', 'verb'=>'POST'),
-				array('user/fastLogin', 'pattern'=> 'user/fastLogin', 'verb'=>'POST'),
-				
-				array('solution/content', 'pattern' => 'solution/content/<solutionId:\d+>', 'verb' => 'GET'),
-				array('solution/create', 'pattern' => 'solution/create', 'verb' => 'POST'),
 				// default rules
 
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
@@ -59,18 +53,18 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=ss',
+			'connectionString' => 'mysql:host=localhost;dbname=20shots',
 			'enableProfiling' => true,
             'enableParamLogging' => true,  
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '23',
+			'username' => '20shots',
+			'password' => 'QxZ67XtexEWAB4pf',
 			'charset' => 'utf8',
 		),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
-            //'errorAction'=>'site/error',
+            'errorAction'=>'site/error',
         ),
 		'log'=>array(
 			'class'=>'CLogRouter',
@@ -108,13 +102,13 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'support@studshara.com',
 		'supportEmail' => 'support@studshara.com',
-		'APP_SHARED_SECRET' => '',
-		'APP_ID' => '',
-
-		'converter' => array(
-			'notificationUrl' => "http://studshara.com/converter/notify",
-			'login' => 'rpritula@takeforce.com',
-			'password' => '0hu6p7fl'
+		'VK' => array(
+			'APP_SHARED_SECRET' => 'nqfgtV4pCRpaGVkK3B4v',
+			'APP_ID' => '3233628',
+		),
+		'FB' => array(
+			'APP_ID' => 305283736244595,
+			'APP_SECRET' => 'c85d3e36b34d2426ccac0b95dd30dec1'
 		)
 	)
 	

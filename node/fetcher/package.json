@@ -1,0 +1,12 @@
+{
+	"name": "20shots",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"mysql": "2.0.0-alpha4",
+		"request": "2.12.0"
+	}
+}

@@ -7,4 +7,6 @@ class AuthController extends Controller {
 		$google = new Google();
 		$google->login();
 	}
+
+
 }
