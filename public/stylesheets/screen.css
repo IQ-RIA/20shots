@@ -17,39 +17,41 @@ html, body {
   font-family: 'Open Sans', sans-serif !important;
 }
 
-/* line 20, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 .login-layout {
-  background-color: #AC0;
+  background-color: #F90;
   background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.3, rgba(255, 255, 255, 0.2)), color-stop(0.3, transparent), to(transparent));
 }
-/* line 26, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 .login-layout .root {
   margin: 0 auto;
   width: 1080px;
   padding-top: 200px;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 .default-layout .brand {
   float: none;
   text-align: center;
 }
-/* line 41, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 .default-layout .left-col,
 .default-layout .right-col,
 .default-layout .middle-col {
   height: 100%;
 }
-/* line 45, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .default-layout .root {
   position: absolute;
-  top: 60px;
+  top: 0px;
   left: 0px;
   right: 0px;
-  bottom: 10px;
+  bottom: 0px;
+  background-color: #F90;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.3, rgba(255, 255, 255, 0.2)), color-stop(0.3, transparent), to(transparent));
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .btn {
   padding: 8px 20px;
   background: #4479BA;
@@ -66,14 +68,14 @@ html, body {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 71, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .btn:hover {
   background: #356094;
   color: #FFF;
   border: solid 1px #2A4E77;
   text-decoration: none;
 }
-/* line 78, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .btn:active {
   color: #FFF;
   background: -webkit-linear-gradient(bottom, #465a8d, #4b64a5);
@@ -84,7 +86,7 @@ html, body {
   border: solid 1px #203E5F;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .left-col {
   float: left;
   width: 250px;
@@ -92,30 +94,30 @@ html, body {
   border-right: 1px solid #999;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .right-col {
   float: right;
   width: 250px;
   border-left: 1px solid #999;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .middle-col {
   margin: 0 250px;
   position: relative;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .no-scroll {
   overflow: hidden;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .scrollable {
   overflow: auto;
   position: absolute;
@@ -125,20 +127,178 @@ html, body {
   right: 5px;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 a {
   color: #4479BA;
   cursor: pointer;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .navbar-inner .logout {
   position: absolute;
   top: 10px;
   right: 15px;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 #play-btn {
   margin-top: -55px;
+}
+
+/* line 144, ../sass/screen.scss */
+.ball {
+  background-color: rgba(0, 0, 0, 0);
+  border: 5px solid rgba(0, 183, 229, 0.9);
+  opacity: .9;
+  border-top: 5px solid rgba(0, 0, 0, 0);
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  box-shadow: 0 0 35px #2187e7;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  -moz-animation: spin .5s infinite linear;
+  -webkit-animation: spin .5s infinite linear;
+}
+
+/* line 158, ../sass/screen.scss */
+.ball1 {
+  background-color: rgba(0, 0, 0, 0);
+  border: 5px solid rgba(0, 183, 229, 0.9);
+  opacity: .9;
+  border-top: 5px solid rgba(0, 0, 0, 0);
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  box-shadow: 0 0 15px #2187e7;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+  -moz-animation: spinoff .5s infinite linear;
+  -webkit-animation: spinoff .5s infinite linear;
+}
+
+@-moz-keyframes spin {
+  /* line 175, ../sass/screen.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  /* line 176, ../sass/screen.scss */
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinoff {
+  /* line 179, ../sass/screen.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  /* line 180, ../sass/screen.scss */
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  /* line 183, ../sass/screen.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 184, ../sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinoff {
+  /* line 187, ../sass/screen.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 188, ../sass/screen.scss */
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+/* line 191, ../sass/screen.scss */
+#center-spinner {
+  position: absolute;
+  top: 45%;
+  left: 0px;
+  right: 0px;
+}
+
+/* line 199, ../sass/screen.scss */
+.adipoli-wrapper {
+  margin: auto;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 205, ../sass/screen.scss */
+.adipoli-wrapper > img {
+  position: absolute;
+  z-index: 1;
+}
+
+/* line 210, ../sass/screen.scss */
+.adipoli-before {
+  position: absolute;
+  z-index: 5;
+}
+
+/* line 215, ../sass/screen.scss */
+.adipoli-after {
+  position: absolute;
+  z-index: 10;
+}
+
+/* line 219, ../sass/screen.scss */
+.adipoli-slice {
+  display: block;
+  position: absolute;
+  z-index: 15;
+  height: 100%;
+}
+
+/* line 226, ../sass/screen.scss */
+.adipoli-box {
+  display: block;
+  position: absolute;
+  z-index: 15;
+}
+
+/* line 232, ../sass/screen.scss */
+#center-field {
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  width: 200px;
+  margin-left: -175px;
+}
+
+/* line 240, ../sass/screen.scss */
+.xx-large {
+  height: 25px;
+  width: 350px;
+}
+
+/* line 245, ../sass/screen.scss */
+#submit-button {
+  margin-right: -215px;
+  margin-top: -45px;
+  height: 30px;
+  padding: 0px 26px;
+}
+
+/* line 252, ../sass/screen.scss */
+#center-field h1, h2, h3, h4, h5 {
+  color: #444;
 }

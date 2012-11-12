@@ -1,3 +1,4 @@
+
 define [
     'j/core/base/View'
     'text!j/view/layout/LoginLayout.tpl'
@@ -10,9 +11,7 @@ define [
         renderParams: {}
 
         events: 
-            "click #vk-login-btn": "onVkLoginButtonClick"
-            "click #play-btn": "onPlayButtonClick"
-            "keypress #search-val": "onSongSearchChanged"
+            "click #fb-login-btn": "onFbLoginButtonClick"
 
         addPage: (page) ->
             if @currentPage
@@ -51,73 +50,27 @@ define [
                 logoutLink: J.links.user.logout
             @
 
-        onVkLoginButtonClick: (e)->
-            e.preventDefault()
-            VK.Auth.login @onVkLogin, 1+4 #notifications and photos
+        onFbLoginButtonClick: ->
+            FB.getLoginStatus (response) =>
+                if response.status == "connected"
+                    @onFacebookLogin response
+                else if response.status == "not_authorized"
+                    @loginViaFacebook()
+                else
+                    @loginViaFacebook()
 
-        onVkLogin: (response)->
-            return if response.status != "connected"
+        loginViaFacebook: ->
+            FB.login (response) =>
+                if response.authResponse
+                    @onFacebookLogin response
+            , scope: "email, user_photos"
 
-            user = response.session.user;
+        onFacebookLogin: (response) ->
+            accessToken = response.authResponse.accessToken
+            $.post "/user/fbLogin", accessToken: accessToken, (response) =>
+                if response.success 
+                    @toDefault().render() 
+                    J.app.user.photosCount = response.count || 200
+            , "json"
 
-            VK.api("isAppUser", 
-                uid: user.id
-            , (response)->
-                return if response.response - 0 != 1 #not applied
-
-                user.first_name = user.first_name
-                user.last_name = user.last_name
-                user.vk_id = user.id
-
-                # login user in server
-
-                $.ajax
-                    type: "POST",
-                    data: user,
-                    url: J.links.user,
-                    dataType: "json",
-                    success: (response)->
-                        window.user = response.user
-                        window.online = response.online
-                        J.app.renderDefaultLayout()
-            , "json")
-
-        onPlayButtonClick: (e) ->
-            target = $(e.target)
-
-            if target.hasClass "isActive"
-                target.val "Play"
-                target.removeClass "isActive"
-            else
-                target.val "Stop Playing"
-                target.addClass "isActive"
-                @playSong()
-
-        playSong: ->
-            el = $("#player").get(0)
-            el.src = "http://#{window.location.hostname}/music/#{J.currentDj}.mp3"
-            el.play()
-
-
-        onSongSearchChanged: (e) ->
-            field = $(e.target)
-
-            if @searchTimeout
-                clearTimeout @searchTimeout
-
-            @searchTimeout = setTimeout =>
-                @loadSongs field.val()
-            , 350
-
-        loadSongs: (name)->
-            VK.api "audio.search", 
-                q: name
-                auto_complete: true
-                sort: 2
-                count: 200
-            , _.bind(@renderSongList, @)
-
-        renderSongList: (config)->
-            @getSongList().updateWith(config.response)
-                
-
+        afterRender: ->

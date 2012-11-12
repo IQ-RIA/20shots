@@ -5,6 +5,7 @@ define(['j/view/layout/Layout'], function() {
   Layout = arguments[0];
   return J.app = window.J.app || new function() {
     return {
+      user: {},
       start: function() {
         this.layout = new Layout();
         if (window.user) {
@@ -14,7 +15,6 @@ define(['j/view/layout/Layout'], function() {
         }
       },
       renderDefaultLayout: function() {
-        this.socket = io.connect("http://" + window.location.host + ":4000");
         return this.layout.toDefault().render();
       },
       renderLoginLayout: function() {

@@ -3,6 +3,7 @@ define [
 ], ->
     Layout = arguments[0]
     J.app = window.J.app || new ()->
+        user: {}
         start: ->
             @layout = new Layout()
 
@@ -12,7 +13,6 @@ define [
                 @renderLoginLayout()
 
         renderDefaultLayout: ->
-            @socket = io.connect "http://#{window.location.host}:4000"
             @layout.toDefault().render()
 
         renderLoginLayout: ->
