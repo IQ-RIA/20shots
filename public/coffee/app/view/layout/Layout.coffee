@@ -68,7 +68,9 @@ define [
         onFacebookLogin: (response) ->
             accessToken = response.authResponse.accessToken
             $.post "/user/fbLogin", accessToken: accessToken, (response) =>
-                @toDefault().render() if response.success 
+                if response.success 
+                    @toDefault().render() 
+                    J.app.user.photosCount = response.count || 200
             , "json"
 
-
+        afterRender: ->

@@ -17,9 +17,7 @@ html, body {
 
 // layouts
 .login-layout {
-	//background: lavender;
-	//background: -webkit-linear-gradient(white, #F0EEFD, white);
-	background-color: #AC0;
+	background-color: #F90;
 	background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.3, rgba(255, 255, 255, .2)), color-stop(.3, transparent), to(transparent));
 
 	.root {
@@ -47,7 +45,7 @@ html, body {
 		left: 0px;
 		right: 0px;
 		bottom: 0px;
-		background-color: #AC0;
+		background-color: #F90;
 		background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.3, rgba(255, 255, 255, .2)), color-stop(.3, transparent), to(transparent));
 	}
 }
@@ -137,4 +135,120 @@ a {
 
 #play-btn {
 	margin-top: -55px;
+}
+
+
+
+
+// spinners
+.ball {
+	background-color: rgba(0,0,0,0);
+	border:5px solid rgba(0,183,229,0.9);
+	opacity:.9;
+	border-top:5px solid rgba(0,0,0,0);
+	border-left:5px solid rgba(0,0,0,0);
+	border-radius:50px;
+	box-shadow: 0 0 35px #2187e7;
+	width:50px;
+	height:50px;
+	margin:0 auto;
+	-moz-animation:spin .5s infinite linear;
+	-webkit-animation:spin .5s infinite linear;
+}
+.ball1 {
+	background-color: rgba(0,0,0,0);
+	border:5px solid rgba(0,183,229,0.9);
+	opacity:.9;
+	border-top:5px solid rgba(0,0,0,0);
+	border-left:5px solid rgba(0,0,0,0);
+	border-radius:50px;
+	box-shadow: 0 0 15px #2187e7; 
+	width:30px;
+	height:30px;
+	margin:0 auto;
+	position:relative;
+	top:-50px;
+	-moz-animation:spinoff .5s infinite linear;
+	-webkit-animation:spinoff .5s infinite linear;
+}
+@-moz-keyframes spin {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(360deg); }
+}
+@-moz-keyframes spinoff {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(-360deg); }
+}
+@-webkit-keyframes spin {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+@-webkit-keyframes spinoff {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(-360deg); }
+}
+
+#center-spinner {
+	position: absolute;
+	top: 45%;
+	left: 0px;
+	right: 0px;
+}
+
+.adipoli-wrapper
+{
+    margin:auto;
+    position:relative;
+    display: inline-block;
+}
+.adipoli-wrapper>img
+{
+    position: absolute;
+    z-index: 1;
+}
+.adipoli-before
+{
+    position: absolute;
+    z-index: 5;
+}
+.adipoli-after
+{
+    position: absolute;
+    z-index: 10;
+}
+.adipoli-slice {
+    display:block;
+    position:absolute;
+    z-index:15;
+    height:100%;
+}
+.adipoli-box
+{
+    display:block;
+    position:absolute;
+    z-index:15;
+}
+
+#center-field {
+	position: absolute;
+	bottom: 45%;
+	left: 50%;
+	width: 200px;
+	margin-left: -175px;
+}
+
+.xx-large {
+	height: 25px;
+	width: 350px;
+}
+
+#submit-button {
+	margin-right: -215px;
+	margin-top: -45px;
+	height: 30px;
+	padding: 0px 26px;
+}
+
+#center-field h1, h2, h3, h4, h5 {
+	color: #444;
 }

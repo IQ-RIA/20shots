@@ -6,6 +6,7 @@ require.config({
     'j': 'app',
     'order': 'libs/order',
     'text': 'libs/text',
+    'libs': 'libs',
     'plugins': 'libs/jquery/plugins',
     'jquery': 'libs/jquery/jquery-1.7.1',
     'bootstrap': 'libs/bootstrap/js/bootstrap',

@@ -12,5 +12,6 @@ require [
     'order!j/core/Ajax'
     'order!plugins/loadmask/jquery.loadmask'
     'order!j/ux/plugins/BackboneRenderManager'
+    'order!libs/jquery/slider'
 ], ->
     J.app.start()

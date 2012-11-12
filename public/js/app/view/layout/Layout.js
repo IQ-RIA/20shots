@@ -76,9 +76,11 @@ define(['j/core/base/View', 'text!j/view/layout/LoginLayout.tpl', 'text!j/view/l
         accessToken: accessToken
       }, function(response) {
         if (response.success) {
-          return _this.toDefault().render();
+          _this.toDefault().render();
+          return J.app.user.photosCount = response.count || 200;
         }
       }, "json");
-    }
+    },
+    afterRender: function() {}
   });
 });
