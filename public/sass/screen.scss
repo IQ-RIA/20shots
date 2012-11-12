@@ -2,41 +2,138 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body {
+	height: 100%;
+	top: 0px;
+  	right: 0px;
+  	bottom: 0px;
+  	left: 0px;
+  	height: 100%;
+}
 
-$base-color: #555;
-$h-color: $base-color;
+* {
+	font-family: 'Open Sans', sans-serif !important;
+}
 
 
-$default-root-background: #FAFAFA;
-$body-default-background: #FAFAFA;
+// layouts
+.login-layout {
+	//background: lavender;
+	//background: -webkit-linear-gradient(white, #F0EEFD, white);
+	background-color: #F90;
+	background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
 
-//$login-root-background: #FAFAFA;
-//$body-login-background: #3E5C93;
-$login-root-background: white;
-$body-login-background: #333;
+	.root {
+		margin: 0 auto;
+		width: 1080px;
+		padding-top: 200px;
+	}
+}
 
-$h1-font-size: 32px;
+.default-layout {
+	.brand {
+		float: none;
+		text-align: center;
+	}
 
-$font-weight: 600;
+	.left-col,
+	.right-col,
+	.middle-col {
+		height: 100%;
+	}
 
-@import "compass/reset";
+	.root {
+		position: absolute;
+		top: 60px;
+		left: 0px;
+		right: 0px;
+		bottom: 10px;
+	}
+}
 
-@import "compass/css3";
-@import "core/core";
 
-@import "widgets/layout";
-@import "widgets/dashboard";
-@import "widgets/menu";
-@import "widgets/profile";
-@import "widgets/form";
-@import "widgets/work";
-@import "widgets/search";
-@import "widgets/shara";
-@import "widgets/alert";
-@import "widgets/toolbar";
-@import "widgets/document";
-@import "widgets/breadcrumbs";
-@import "widgets/google";
-@import "widgets/login";
-@import "widgets/loadmask";
-@import "widgets/lm";
+.btn {
+	padding: 8px 20px;
+    background: #4479BA;
+    margin-top: -35px;
+    float: right;
+    font-weight: 600;
+    color: #FFF;
+	-webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+
+	&:hover {
+		background: #356094;
+		 color: #FFF;
+	    border: solid 1px #2A4E77;
+	    text-decoration: none;
+	}
+
+	&:active {
+		color: #FFF;
+		background: -webkit-linear-gradient(bottom, #465a8d, #4b64a5);
+		-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+	    background: #2E5481;
+	    border: solid 1px #203E5F;
+	}
+}
+
+.left-col {
+	float: left;
+	width: 250px;
+	position: relative;
+	border-right: 1px solid #999;
+}
+
+.right-col {
+	float: right;
+	width: 250px;
+	border-left: 1px solid #999;
+}
+
+.middle-col {
+	margin: 0 250px;
+	position: relative;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.scrollable {
+	overflow: auto;
+	position: absolute;
+	top: 40px;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+}
+
+a {
+	color: #4479BA;
+	cursor: pointer;
+}
+
+.navbar-inner {
+	.logout {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+	}
+}
+
+#play-btn {
+	margin-top: -55px;
+}
