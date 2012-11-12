@@ -108,6 +108,8 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'support@studshara.com',
 		'supportEmail' => 'support@studshara.com',
+		'APP_SHARED_SECRET' => '',
+		'APP_ID' => '',
 
 		'converter' => array(
 			'notificationUrl' => "http://studshara.com/converter/notify",

@@ -3,8 +3,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="en" />
-        <meta name="keywords" content="контрольные работы,курсовые работы,лабораторные работы,решение задач,могилянка,ЧДУ">
-        <meta name="description" content="Огромная колекция свободных решений лабораторных, контрольных робот, лекций, литературы и зароботок для студентов.">
         <title>
             <?php echo CHtml::encode($this->pageTitle); ?>
         </title>

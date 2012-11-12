@@ -53,7 +53,7 @@ define [
 
         onVkLoginButtonClick: (e)->
             e.preventDefault()
-            VK.Auth.login @onVkLogin, 8
+            VK.Auth.login @onVkLogin, 1+4 #notifications and photos
 
         onVkLogin: (response)->
             return if response.status != "connected"
