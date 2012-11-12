@@ -19,8 +19,8 @@ html, body {
 
 /* line 20, ../sass/screen.scss */
 .login-layout {
-  background-color: #F90;
-  background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
+  background-color: #AC0;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.3, rgba(255, 255, 255, 0.2)), color-stop(0.3, transparent), to(transparent));
 }
 /* line 26, ../sass/screen.scss */
 .login-layout .root {
